@@ -1,0 +1,222 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8"> <!--Tova ni dava vuzmojnost da izpolzvame simvoli razlichni ot latinica!-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="create_user.css"/> <!--Zarejvame i opisvame koj css fail shte izpolzwa tozi html fail!-->
+  <!--<link rel="stylesheet" type="text/css" href="reset-css.css"/>-->
+<!--  <link rel="stylesheet" type="text/css" href="css-icon/css/fontawesome.min.css"/>-->
+<!--  <link rel="stylesheet" type="text/css" href="css-icon/css/fontawesome.css"/>-->
+  <!--<script src="main.js"></script> Prikachame javascript fail kym html ako imame takyv v directoriqta!-->
+  <!--<link hrev="havicon.ico" rel="shortcut icon" type="image/x-icon"/> Po tozi nachin slagame kartinka v stranicata na browsera!-->
+  <title>Add new User</title> <!--Sydyrjanie na taba v Browsera!-->
+
+  <style>
+/*kogato sme s mishkata vurhy obekt, promenqme viziqta na obekta dokato sme na nego s mishkata
+html:active {
+ background-color: yellow;
+}*/
+
+/* Slagam tozi malkiq reset v komentar, zashtoto sym prikachi v html-a golemiqt reset: reset-css*/
+* {
+ margin: 0;
+ padding: 0;
+}
+
+/* hubavo e da imame property( img max-width: 100%;) za vsichki snimki pri responsive proekt,
+ zashtoto tova ni garantira, che tazi snimka nqma da si napusne konteinera. Toest, kolkoto i maluk da stane nashiq kontainer
+ v koito se sudurja tazi snimka, maksimalnata shirina na tazi snimka shte bude 100% ot neiniq kontainer. Taka tq nikoga nqma da
+ napusne kontejnera roditel i nqma da izbuta drugi elementi
+ */
+img {
+ max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+ margin: auto;
+ background: #eaeaea;
+ font-family": 'Open Sans', sans-serif;
+}
+
+.info p {
+ text-align: center;
+ color: #999;
+ text-transform: none;
+ font-weight: 600;
+ font-size: 15px;
+ margin-top: 2px;
+}
+
+form{
+ border-radius: 5px;
+ width: 700px;
+ margin: 10px;
+ margin: 0 auto;
+ background-color: #FFF;
+ padding: 10px 20px;
+}
+
+p span {
+ color: #F00;
+}
+
+p {
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+ font-weight: 500;
+ line-height: 2;
+ color: #333;
+}
+
+h1 {
+ font-family: Arial, Helvetica, sans-serif;
+ text-align: center;
+ color: black;
+ text-shadow: 1px 1px 0 #fff;
+ margin: 20px 0 0 ;
+}
+
+input, textarea {
+ border-radius: 0 5px 5px 0;
+ border: 1px solid #eee;
+ padding: 5px 8px;
+ width: calc(100% - 40px);
+ box-sizing: border-box;
+ font-size: 1.1em;
+}
+
+input {
+ margin-bottom: 15px;
+ height: 40px;
+}
+
+textarea {
+ margin: 0;
+ height: 127px;
+}
+
+.icon-case {
+ width: 35px;
+ float: left;
+ border-radius: 5px 0 0 5px;
+ background: #eee;
+ height: 40px;
+ text-align: center;
+ line-height: 40px;
+}
+
+i {
+ color: #555;
+}
+
+.button-contact {
+ background: #81bda4;
+ color: #fff;
+ text-align: center;
+ width: 100%;
+ border: 0;
+ padding: 17px 25px;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-top: 20px;
+ font-size: 1.4em;
+ font-weight: bold;
+ text-shadow: 0 0 1px black;
+}
+
+.button-contact:hover {
+ font-weight: bold;
+ box-shadow: 0 0 5px black;
+}
+
+.left-contact{
+ width: 100%;
+ float: left;
+ box-sizing: border-box;
+ padding: 0 15px 0 0;
+}
+
+@media all and (max-width: 800px) {
+ form {
+  width: 100%;
+  box-sizing: border-box;
+ }
+}
+
+@media all and (max-width: 660px) {
+ .right-contact,
+ .left-contact {
+  width: 100%;
+  float: none;
+  padding: 0;
+ }
+}
+
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+</style>
+</head>
+
+<body>
+<!--css-tricks.com  sait za obqsnenie i wsichko za css!-->
+
+<h1>Registration form</h1>
+
+<form th:action="@{/users}" th:object = "${user}" type="#" method="post" enctype="multipart/form-data">
+  <div class="left-contact">
+    <div class="form-group">
+      <p>ID<span>*</span></p>
+      <label class="icon-case" for="id_user">
+        <i class="fa fa-male"></i>
+      </label>
+      <input type="text" name="id_user" id="id_user"
+             th:field = "*{id}"
+             class = "form-control"
+             placeholder="Enter ID"
+             required/>
+    </div>
+
+    <div class="form-group">
+      <p>User Name<span>*</span></p>
+      <label class="icon-case" for="user_name">
+        <i class="fa fa-user"></i>
+      </label>
+      <input type="text" name="user_name" id="user_name"
+             th:field = "*{userName}"
+             class = "form-control"
+             placeholder="Enter User Name"
+             required/>
+    </div>
+
+    <div class="form-group">
+      <p>E-Mail<span>*</span></p>
+      <label class="icon-case" for="email">
+        <i class="fa fa-envelope-o"></i>
+      </label>
+      <input type="text" name="email" id="email"
+             th:field = "*{email}"
+             class = "form-control"
+             placeholder="Enter Student Email"
+             required/>
+    </div>
+
+  </div>
+
+  <button type="submit" class="button-contact">Send</button>
+</form>
+</body>
+
+</html>

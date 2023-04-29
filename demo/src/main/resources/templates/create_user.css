@@ -1,0 +1,156 @@
+
+/*kogato sme s mishkata vurhy obekt, promenqme viziqta na obekta dokato sme na nego s mishkata
+html:active {
+ background-color: yellow;
+}*/
+
+/* Slagam tozi malkiq reset v komentar, zashtoto sym prikachi v html-a golemiqt reset: reset-css*/
+* {
+ margin: 0;
+ padding: 0;
+}
+
+/* hubavo e da imame property( img max-width: 100%;) za vsichki snimki pri responsive proekt,
+ zashtoto tova ni garantira, che tazi snimka nqma da si napusne konteinera. Toest, kolkoto i maluk da stane nashiq kontainer
+ v koito se sudurja tazi snimka, maksimalnata shirina na tazi snimka shte bude 100% ot neiniq kontainer. Taka tq nikoga nqma da
+ napusne kontejnera roditel i nqma da izbuta drugi elementi
+ */
+img {
+ max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+ margin: auto;
+ background: #eaeaea;
+ font-family": 'Open Sans', sans-serif;
+}
+
+.info p {
+ text-align: center;
+ color: #999;
+ text-transform: none;
+ font-weight: 600;
+ font-size: 15px;
+ margin-top: 2px;
+}
+
+form{
+ border-radius: 5px;
+ width: 700px;
+ margin: 10px;
+ margin: 0 auto;
+ background-color: #FFF;
+ padding: 10px 20px;
+}
+
+p span {
+ color: #F00;
+}
+
+p {
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+ font-weight: 500;
+ line-height: 2;
+ color: #333;
+}
+
+h1 {
+ font-family: Arial, Helvetica, sans-serif;
+ text-align: center;
+ color: black;
+ text-shadow: 1px 1px 0 #fff;
+ margin: 20px 0 0 ;
+}
+
+input, textarea {
+ border-radius: 0 5px 5px 0;
+ border: 1px solid #eee;
+ padding: 5px 8px;
+ width: calc(100% - 40px);
+ box-sizing: border-box;
+ font-size: 1.1em;
+}
+
+input {
+ margin-bottom: 15px;
+ height: 40px;
+}
+
+textarea {
+ margin: 0;
+ height: 127px;
+}
+
+.icon-case {
+ width: 35px;
+ float: left;
+ border-radius: 5px 0 0 5px;
+ background: #eee;
+ height: 40px;
+ text-align: center;
+ line-height: 40px;
+}
+
+i {
+ color: #555;
+}
+
+.button-contact {
+ background: #81bda4;
+ color: #fff;
+ text-align: center;
+ width: 100%;
+ border: 0;
+ padding: 17px 25px;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-top: 20px;
+ font-size: 1.4em;
+ font-weight: bold;
+ text-shadow: 0 0 1px black;
+}
+
+.button-contact:hover {
+ font-weight: bold;
+ box-shadow: 0 0 5px black;
+}
+
+.left-contact{
+ width: 100%;
+ float: left;
+ box-sizing: border-box;
+ padding: 0 15px 0 0;
+}
+
+@media all and (max-width: 800px) {
+ form {
+  width: 100%;
+  box-sizing: border-box;
+ }
+}
+
+@media all and (max-width: 660px) {
+ .right-contact,
+ .left-contact {
+  width: 100%;
+  float: none;
+  padding: 0;
+ }
+}
+
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
+
